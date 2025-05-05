@@ -1,0 +1,23 @@
+<div class="login-container">
+    <h2>Login Form</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+    <div class="input-group">
+    <label>Email</label>
+    <input  appAutofocus type="email" formControlName="email"/>
+</div>
+<div *ngIf="loginForm.get('email')?.touched && !loginForm.get('email')?.valid"> 
+    <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required!</div>
+    <div *ngIf="loginForm.get('email')?.errors?.['email']">Email is Invalid!</div>
+    </div>
+<div class="input-group">
+    <label>Password</label>
+    <input type="text" formControlName="password"/>
+    
+</div>
+<div *ngIf="loginForm.get('password')?.touched && !loginForm.get('password')?.valid"> 
+    <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required!</div>
+    <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password should be length 6!</div>
+</div>
+<button type="submit">Submit</button>
+</form>
+</div>

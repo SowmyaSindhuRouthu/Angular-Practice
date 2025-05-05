@@ -1,0 +1,7 @@
+<p>parent-com works!</p>
+<app-practice-com 
+[name]= "childmsg" 
+[timer]="timerSetTochild"
+(timeup)="timeCheck($event)"
+ ></app-practice-com>
+ <p *ngIf="timesUp">Times Up Baby</p>

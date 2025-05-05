@@ -1,0 +1,25 @@
+<p>practice-com works!</p>
+<p>Welcome back, {{ name? name : 'guest' }}!</p>
+<p>--------------Task 1: Toggle Status Component--------------</p>
+<button (click)="checkStatus()">Status</button>
+<p>{{status? 'Active': 'Inactive'}}</p>
+
+<p>----------Task 3: Service to Share Data Between Components------</p>
+{{displayMsgFromService}}
+
+<p>--------------Task 4: Router Navigation Programmatically--------------</p>
+<button (click)="goToLogin()">GotoLogin</button>
+
+<p>--------------Task 5: Show a Loading Spinner While Data Loads--------------</p>
+<mat-spinner diameter="50" color="primary"></mat-spinner>
+
+<p>------------- Challenge 4: Build a Custom Pipe--------------</p>
+<p>{{ customPipevalue | shorten: 5}}</p>
+
+<p>-------------  Challenge 6: Countdown Timer Component--------------</p>
+<p>countDown Timer: {{countdownTimer}}</p>
+
+<p>------------- Challenge 7: Debounced Search Input--------------</p>
+Search :<input type="text"  placeholder="Search here" [formControl]="searchInput">
+<p>-------- Challenge 10: Reusable Confirm Dialog (Modal)----------</p>
+<button mat-button (click)="openDialog()">Launch dialog</button>
